@@ -21,7 +21,7 @@ This project analyzes and predicts **customer churn** using a real-world Telco d
 
 ## 🗂️ Dataset
 
-- **Telco Customer Churn dataset**: [Download here](https://www.kaggle.com/blastchar/telco-customer-churn).
+- **Telco Customer Churn dataset**: [Download here](https://www.kaggle.com/blastchar/telco-customer-churn)
 - Contains customer demographics, services, billing, and churn labels.
 
 ---
@@ -53,3 +53,19 @@ Or run locally:
 ```bash
 pip install -r requirements.txt
 streamlit run app/streamlit_app.py
+
+## 📁 Folder Structure
+
+.
+├── customer_churn.ipynb     # Notebook with EDA and modeling
+├── app/
+│   ├── streamlit_app.py     # Streamlit web app
+│   └── model/
+│       └── churn_model.pkl  # Saved XGBoost model
+├── data/
+│   └── WA_Fn-UseC_-Telco-Customer-Churn.csv
+├── requirements.txt
+├── README.md
+└── ...
+
+
