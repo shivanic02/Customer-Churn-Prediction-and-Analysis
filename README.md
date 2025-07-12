@@ -45,7 +45,7 @@ This project analyzes and predicts **customer churn** using a real-world Telco d
 ---
 
 ## 📁 Folder Structure
-
+```
 .
 ├── customer_churn.ipynb     # Notebook with EDA and modeling
 ├── app/
@@ -56,6 +56,8 @@ This project analyzes and predicts **customer churn** using a real-world Telco d
 │   └── WA_Fn-UseC_-Telco-Customer-Churn.csv
 ├── requirements.txt
 ├── README.md
+
+```
 
 ---
 
