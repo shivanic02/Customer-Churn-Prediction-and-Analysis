@@ -1,6 +1,6 @@
 # 💼 Customer Churn Prediction & Analysis
 
-![Churn Banner](https://user-images.githubusercontent.com/your-banner-image.png)
+![Churn Banner](./banner.png)
 
 ## 🚀 Overview
 
