@@ -61,7 +61,7 @@ This project analyzes and predicts **customer churn** using a real-world Telco d
 
 ## 🌟 Streamlit App
 
-👉 **Try it live (if deployed):** [Streamlit App Link](https://your-app-link.streamlit.app)
+👉 **Try it live (if deployed):** [Streamlit App Link](https://customer-churn-prediction-and-analysis-66prjho2qqhprceqcqnnbo.streamlit.app/)
 
 Or run locally:
 
