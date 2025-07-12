@@ -44,16 +44,6 @@ This project analyzes and predicts **customer churn** using a real-world Telco d
 
 ---
 
-## 🌟 Streamlit App
-
-👉 **Try it live (if deployed):** [Streamlit App Link](https://your-app-link.streamlit.app)
-
-Or run locally:
-
-```bash
-pip install -r requirements.txt
-streamlit run app/streamlit_app.py
-
 ## 📁 Folder Structure
 
 .
@@ -66,6 +56,19 @@ streamlit run app/streamlit_app.py
 │   └── WA_Fn-UseC_-Telco-Customer-Churn.csv
 ├── requirements.txt
 ├── README.md
-└── ...
+
+---
+
+## 🌟 Streamlit App
+
+👉 **Try it live (if deployed):** [Streamlit App Link](https://your-app-link.streamlit.app)
+
+Or run locally:
+
+```bash
+pip install -r requirements.txt
+streamlit run app/streamlit_app.py
+
+
 
 
