@@ -3,7 +3,10 @@ import joblib
 import numpy as np
 
 # Load model
-model = joblib.load('app/model/churn_model.pkl')
+import xgboost as xgb
+
+model = xgb.Booster()
+model.load_model('app/model/churn_model.json')
 
 st.title("Customer Churn Prediction App")
 
@@ -72,11 +75,18 @@ for col in model.get_booster().feature_names:
     if col not in input_data:
         input_data[col] = 0
 
-# Convert to array in correct column order
-input_df = np.array([list(input_data[col] for col in model.get_booster().feature_names)])
+import pandas as pd
+import xgboost as xgb
 
-# Predict probability
-churn_prob = model.predict_proba(input_df)[0][1]
+# Convert input dictionary to pandas DataFrame
+input_df_pd = pd.DataFrame([input_data])
+
+# Convert to DMatrix
+dtest = xgb.DMatrix(input_df_pd)
+
+# Predict churn probability
+churn_prob = model.predict(dtest)[0]
+
 
 st.subheader("Predicted Churn Probability")
 st.write(f"**{churn_prob:.2%} chance this customer will churn.**")
