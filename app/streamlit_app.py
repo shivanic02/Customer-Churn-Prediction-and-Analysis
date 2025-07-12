@@ -1,10 +1,13 @@
 import streamlit as st
-import joblib
-import numpy as np
-
-# Load model
+import json
+import pandas as pd
 import xgboost as xgb
 
+# Load feature names
+with open('app/model/feature_names.json') as f:
+    feature_names = json.load(f)
+
+# Load XGBoost Booster model
 model = xgb.Booster()
 model.load_model('app/model/churn_model.json')
 
@@ -42,7 +45,7 @@ input_data = {
     'tenure': tenure,
     'MonthlyCharges': monthly_charges,
     'TotalCharges': total_charges,
-    'gender': 1,  # default example (could add as input)
+    'gender': 1,  # default example (could be extended)
     'SeniorCitizen': 0,
     'Partner': 1,
     'Dependents': 0,
@@ -71,15 +74,12 @@ input_data['PaymentMethod_Bank transfer (automatic)'] = 1 if payment_method == "
 input_data['PaymentMethod_Credit card (automatic)'] = 1 if payment_method == "Credit card (automatic)" else 0
 
 # Fill remaining columns as 0 if needed
-for col in model.get_booster().feature_names:
+for col in feature_names:
     if col not in input_data:
         input_data[col] = 0
 
-import pandas as pd
-import xgboost as xgb
-
-# Convert input dictionary to pandas DataFrame
-input_df_pd = pd.DataFrame([input_data])
+# Convert to DataFrame with correct feature order
+input_df_pd = pd.DataFrame([input_data])[feature_names]
 
 # Convert to DMatrix
 dtest = xgb.DMatrix(input_df_pd)
@@ -87,7 +87,7 @@ dtest = xgb.DMatrix(input_df_pd)
 # Predict churn probability
 churn_prob = model.predict(dtest)[0]
 
-
+# Display prediction
 st.subheader("Predicted Churn Probability")
 st.write(f"**{churn_prob:.2%} chance this customer will churn.**")
 
