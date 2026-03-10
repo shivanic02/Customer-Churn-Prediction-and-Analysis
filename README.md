@@ -1,32 +1,32 @@
-# 💼 Customer Churn Prediction & Analysis
+# Customer Churn Prediction & Analysis
 
 ![Churn Banner](./banner.png)
 
-## 🚀 Overview
+## Overview
 
 This project analyzes and predicts **customer churn** using a real-world Telco dataset. We explore key factors influencing churn, build predictive models, and create an interactive **Streamlit web app** for churn risk scoring.
 
-🎯 **Business Goal**: Identify customers likely to leave and suggest actionable strategies to improve retention.
+**Business Goal**: Identify customers likely to leave and suggest actionable strategies to improve retention.
 
 ---
 
-## 💡 Key Features
+## Key Features
 
-- 📊 **End-to-end analysis**: From data cleaning and EDA to model building and business insights.
-- 🤖 **Advanced models**: Logistic Regression, Random Forest, and XGBoost compared and interpreted.
-- 💥 **Interactive Streamlit app**: Predict churn risk dynamically based on customer features.
-- 📈 **Business recommendations**: Data-backed insights for churn reduction strategies.
+- **End-to-end analysis**: From data cleaning and EDA to model building and business insights.
+- **Advanced models**: Logistic Regression, Random Forest, and XGBoost compared and interpreted.
+- **Interactive Streamlit app**: Predict churn risk dynamically based on customer features.
+- **Business recommendations**: Data-backed insights for churn reduction strategies.
 
 ---
 
-## 🗂️ Dataset
+## Dataset
 
 - **Telco Customer Churn dataset**: [Download here](https://www.kaggle.com/blastchar/telco-customer-churn)
 - Contains customer demographics, services, billing, and churn labels.
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 - **Python (pandas, scikit-learn, XGBoost, matplotlib, seaborn)**
 - **Streamlit** for web app
@@ -35,16 +35,16 @@ This project analyzes and predicts **customer churn** using a real-world Telco d
 
 ---
 
-## 💬 Business Insights
+## Business Insights
 
-✔️ Month-to-month contract customers have **high churn risk** — suggest loyalty programs.  
-✔️ Fiber optic customers churn more — consider special retention offers.  
-✔️ Customers without security or tech support services are more likely to churn — offer bundled services.  
-✔️ High monthly charges correlate with churn — provide personalized discount or value packages.
+- Month-to-month contract customers have **high churn risk** — suggest loyalty programs.  
+- Fiber optic customers churn more — consider special retention offers.  
+- Customers without security or tech support services are more likely to churn — offer bundled services.
+- High monthly charges correlate with churn — provide personalized discount or value packages.
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 ```
 .
 ├── customer_churn.ipynb # Notebook with EDA and modeling
@@ -63,9 +63,9 @@ This project analyzes and predicts **customer churn** using a real-world Telco d
 
 ---
 
-## 🌟 Streamlit App
+## Streamlit App
 
-👉 **Try it live:** [Streamlit App Link](https://customer-churn-prediction-and-analysis-66prjho2qqhprceqcqnnbo.streamlit.app/)
+**Try it live:** [Streamlit App Link](https://customer-churn-prediction-and-analysis-66prjho2qqhprceqcqnnbo.streamlit.app/)
 
 Or run locally:
 
